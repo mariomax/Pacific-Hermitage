@@ -1,0 +1,855 @@
+/*
+Theme Name: Twenty Nineteen Child
+Theme URI: https://en-gb.wordpress.org/themes/twentynineteen/
+Author: ChildThemeWP.com
+Author URI: https://childthemewp.com
+Description: My WordPress Twenty Nineteen child theme.
+Template: twentynineteen
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Version: 1.0.0
+Text Domain: twentynineteen-child
+*/
+
+/* Color palette */
+/*
+  White Salmon Blue: #303E5C; (--link)
+  Link Hover: #305271;
+  Pine Needle: #92ACA3;
+  Forest Fog: #DEE6E3;
+  Gold: #D3AC5E;
+  Saffron: #C6842F;
+  Seed Black: #33363C;
+  Cloud: #F1F2F2;
+*/
+
+:root {
+  --link: #303E5C;
+  --blue: #305271;
+  --hover: #C6842F;
+  --saffron: #C6842F;
+  --gold: #D3AC5E;
+  --pine: #92ACA3;
+  --fog: #DEE6E3;
+  --cloud: #F1F2F2;
+  --seed: #33363C;
+}
+
+@font-face {
+  font-family: "NeutraDisplay-Draft";
+  src: url(https://sanghata.pacifichermitage.org/wp-content/themes/twentynineteen-child/fonts/NeutraDisplay-Draft.otf);
+  font-weight: normal;
+}
+
+html {
+  font-size: 20px;
+}
+
+body * {
+  font-family: Lato, sans-serif;
+}
+
+/* These need to be specified moreso than body - argh. */
+button,
+blockquote cite,
+table,
+.entry .entry-content .wp-block-button .wp-block-button__link,
+.entry .entry-content .wp-block-archives li,
+.entry .entry-content .wp-block-categories li,
+.entry .entry-content .wp-block-latest-posts li,
+.entry .entry-content .wp-block-pullquote cite,
+.entry .entry-content .wp-block-cover-image .wp-block-cover-image-text,
+.entry .entry-content .wp-block-cover-image .wp-block-cover-text,
+.entry .entry-content .wp-block-cover-image h2,
+.entry .entry-content .wp-block-cover .wp-block-cover-image-text,
+.entry .entry-content .wp-block-cover .wp-block-cover-text,
+.entry .entry-content .wp-block-cover h2,
+.entry .entry-content .wp-block-audio figcaption,
+.entry .entry-content .wp-block-video figcaption,
+.entry .entry-content .wp-block-image figcaption,
+.entry .entry-content .wp-block-gallery .blocks-gallery-image figcaption,
+.entry .entry-content .wp-block-gallery .blocks-gallery-item figcaption,
+.entry .entry-content .wp-block-file,
+.entry .entry-content .wp-block-file .wp-block-file__button,
+.entry .entry-content .wp-block-latest-comments .wp-block-latest-comments__comment-meta,
+.comment-navigation .nav-previous,
+.comment-navigation .nav-next,
+.comment-list .pingback .comment-body,
+.comment-list .trackback .comment-body,
+.comment-list .pingback .comment-body .comment-edit-link,
+.comment-list .trackback .comment-body .comment-edit-link,
+.comment-form .comment-notes,
+.comment-form label,
+.gallery-caption,
+.wp-caption-text,
+.widget_archive ul li,
+.widget_categories ul li,
+.widget_meta ul li,
+.widget_nav_menu ul li,
+.widget_pages ul li,
+.widget_recent_comments ul li,
+.widget_recent_entries ul li,
+.widget_rss ul li {
+  font-family: Lato, sans-serif;
+}
+
+/* Base colors & Fonts */
+
+.site-title a {
+  color: var(--link) !important;
+  font-size: 2rem;
+}
+
+.site-title a:hover {
+  color: var(--seed);
+}
+
+.site-title a:link {
+  color: var(--link) !important;
+  font-family: "NeutraDisplay-Draft";
+}
+
+p {
+  line-height: 1.5;
+}
+
+a {
+  color: var(--link);
+  font-weight: 700;
+}
+
+a:visited {
+  color: var(--blue);
+}
+
+a:hover,
+a:active {
+  color: var(--hover);
+}
+
+.entry .entry-content a {
+  text-decoration: none;
+}
+
+.entry .entry-content a:hover {
+  text-decoration: underline;
+}
+
+.entry-title {
+  color: var(--link);
+}
+
+.entry-content h3 {
+  color: var(--saffron);
+  font-size: 1.1rem;
+}
+
+.entry-content h4 {
+  color: var(--blue);
+}
+
+.entry-content li {
+  color: var(--blue);
+}
+
+blockquote {
+  border-left: 2px solid var(--link);
+}
+
+/* Twenty Nineteen tweaks */
+
+.entry .entry-title:before {
+  display: none !important;
+}
+
+/*  Header */
+
+.site-header {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.1))), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/mobile-header-3x4.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/mobile-header-3x4.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 1rem 0 25vh;
+  margin: 0;
+}
+
+.entry .entry-header {
+  margin: calc(2 * 1rem) 1rem 1rem;
+}
+
+.site-description {
+  color: var(--saffron);
+  display: block;
+  font-family: "NeutraDisplay-Draft";
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.site-title:not(:empty)+.site-description:not(:empty):before {
+  content: "";
+  margin: 0;
+}
+
+.site-title:not(:empty)+.site-description:not(:empty):before {
+  content: "" !important;
+}
+
+/* Navigation */
+
+a {
+  -webkit-transition: color 110ms ease-in-out;
+  transition: color 110ms ease-in-out;
+  color: var(--link);
+}
+
+.main-navigation {
+  margin-top: 1.5rem
+}
+
+.main-navigation .main-menu>li {
+  color: var(--link);
+}
+
+.main-navigation .main-menu>li>a {
+  color: var(--link);
+}
+
+.main-navigation .main-menu>li>a:hover {
+  border-bottom: solid 3px var(--hover);
+  padding-bottom: 3px;
+}
+
+.main-navigation .main-menu>li>a:hover,
+.main-navigation .main-menu>li>a:hover+svg {
+  color: var(--hover);
+}
+
+.main-navigation .sub-menu {
+  background-color: var(--link);
+}
+
+.main-navigation .sub-menu>li>.menu-item-link-return {
+  font-family: Lato, sans-serif;
+}
+
+/* Site branding & Hero */
+
+.site-branding-container {
+  padding: 0 1rem;
+}
+
+/* Forms */
+
+.button,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background: var(--hover);
+  font-family: Lato, sans-serif;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+  border-color: var(--hover);
+}
+
+/* Pages */
+/*  
+  Page ids
+  Home post-10
+  About post-14 
+  Finances post-21
+  Support post-25 
+*/
+
+#post-10 h1.entry-title,
+#post-14 h1.entry-title,
+#post-21 h1.entry-title,
+#post-25 h1.entry-title {
+  color: var(--link);
+  font-family: "NeutraDisplay-Draft";
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.entry .entry-title:before {
+  display: none;
+}
+
+.entry .entry-content p {
+  margin: 16px 0 32px;
+}
+
+.entry .entry-content h3 {
+  max-width: 100%;
+}
+
+p {
+  color: var(--link);
+  font-weight: normal;
+}
+
+/* Home */
+
+.cta-box-left {
+  -ms-flex-preferred-size: 100%;
+  flex-basis: 100%;
+}
+
+.cta-box-right {
+  -ms-flex-preferred-size: 50%;
+  flex-basis: 50%;
+}
+
+h3.callout {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.entry .entry-content .wp-block-button .wp-block-button__link {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.entry .entry-content .wp-block-button .wp-block-button__link:not(.has-background) {
+  background-color: var(--saffron);
+  -webkit-box-shadow: 7px 7px 5px var(--fog);
+  box-shadow: 7px 7px 5px var(--fog);
+}
+
+.entry .entry-content .wp-block-button .wp-block-button__link:hover {
+  background: var(--gold);
+}
+
+.cta-box-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cta-box-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+h4.home-news {
+  color: var(--link);
+}
+
+.entry .entry-content .wp-block-latest-posts li {
+  color: var(--seed);
+}
+
+.entry .entry-content .wp-block-latest-posts li a:hover {
+  color: var(--hover);
+}
+
+.wp-block-latest-posts__post-date {
+  color: var(--link);
+}
+
+/* About */
+
+.entry .entry-content .board-image {
+  border-radius: 5px;
+  margin: 0;
+}
+
+.member-picture img {
+  border-radius: 5px;
+}
+
+h3.board-member {
+  color: var(--link);
+  margin: 0;
+}
+
+.board-position {
+  color: var(--saffron);
+  margin: .5rem 0 1rem;
+}
+
+.board-description {
+  font-size: .9rem;
+}
+
+/* Support */
+
+.donor-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.entry .entry-content .donate-link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin-bottom: .75rem;
+}
+
+#checks,
+#cash,
+#amazonSmile {
+  padding-top: 1rem;
+}
+
+img.donate-icon {
+  max-width: 1.2rem;
+  margin-right: .75rem;
+}
+
+.foundation {
+  color: var(--saffron);
+  font-family: "NeutraDisplay-Draft";
+  font-weight: 600;
+}
+
+.entry .entry-content p.check-address,
+.entry .entry-content p.bank-address {
+  margin: 1rem 0 3rem;
+}
+
+.donor-callout {
+  color: var(--saffron);
+}
+
+.responsive-spacer {
+  height: 1rem !important;
+}
+
+.entry .entry-content .cash-p {
+  margin: 1rem 0 3rem;
+}
+
+.entry .entry-content .amazon-icon {
+  margin: 0;
+  max-width: 10rem;
+}
+
+/* Donorbox customization */
+/* The customization of fonts, colors, margin/padding is at https://donorbox.org  */
+/* See content in donorbox.css */
+
+.wp-block-code {
+  border: none;
+  padding: 0;
+}
+
+/* Finances */
+
+.entry .entry-content h4.info-heading {
+  color: var(--link);
+  margin: 32px 0 8px;
+}
+
+.site-title:not(:empty)+.site-description:not(:empty):before {
+  content: "\007C";
+}
+
+/* Archives (index.php) */
+
+header.entry-header {
+  margin: calc(2 * 1rem) 1rem 1rem;
+}
+
+h1.blog-title::before {
+  background: #fff;
+}
+
+h1.blog-page-title {
+  color: var(--link);
+  font-family: "NeutraDisplay-Draft";
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+/* Posts */
+
+h1.entry-title {
+  font-family: Lato, sans-serif;
+  font-size: 1.25rem;
+}
+
+h2.entry-title a {
+  font-size: 1.125rem;
+}
+
+h2.comments-title {
+  color: var(--seed);
+  font-family: Lato, sans-serif;
+  font-size: 1.5rem;
+}
+
+.entry .entry-meta,
+.entry .entry-footer,
+.post-navigation .nav-links a .meta-nav {
+  color: var(--seed);
+}
+
+.entry .entry-meta a:hover,
+.entry .entry-footer a:hover,
+.post-navigation .nav-links a:hover {
+  color: var(--hover);
+}
+
+/* *:before {
+  background: #fff;
+  content: "" !important;
+  height: 0px;
+  width: 0px;
+} */
+
+h1:not(.site-title):before,
+h2:before {
+  height: 0;
+}
+
+.comments-area .comments-title-wrap .comments-title:before {
+  height: 0px;
+  margin: 0;
+  width: 0px;
+}
+
+/* Footer */
+
+footer.site-footer {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.3))), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/mobile-footer-4x5.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/mobile-footer-4x5.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 3rem 0 0;
+}
+
+.widget-title:before {
+  display: none;
+}
+
+h2.widget-title {
+  color: var(--link);
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin: 1rem 0 .5rem;
+}
+
+.footer-links,
+.contact-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+
+.footer-links a,
+.contact-info a,
+.contact-info p,
+.widget_nav_menu ul li a {
+  color: var(--link);
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 1.75;
+}
+
+.contact-info p {
+  margin: 0;
+}
+
+.footer-links a:hover,
+.contact-info a:hover,
+.widget_nav_menu ul li a:hover {
+  color: var(--hover);
+  text-decoration: underline;
+}
+
+#menu-item-115,
+#menu-item-116 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+@media only screen and (min-width: 600px) {
+
+  .member-picture {
+    -ms-flex-preferred-size: 35%;
+    flex-basis: 35%;
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+  }
+
+  .member-info {
+    -ms-flex-preferred-size: calc(65% - 32px);
+    flex-basis: calc(65% - 32px);
+    -webkit-box-flex: 0;
+    -ms-flex-positive: 0;
+    flex-grow: 0;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+
+  .main-navigation .sub-menu>li>a:hover,
+  .main-navigation .sub-menu>li>a:focus,
+  .main-navigation .sub-menu>li>.menu-item-link-return:hover,
+  .main-navigation .sub-menu>li>.menu-item-link-return:focus {
+    background: var(--hover);
+  }
+
+  .main-navigation .sub-menu>li>a:hover:after,
+  .main-navigation .sub-menu>li>a:focus:after,
+  .main-navigation .sub-menu>li>.menu-item-link-return:hover:after,
+  .main-navigation .sub-menu>li>.menu-item-link-return:focus:after {
+    background: var(--hover);
+  }
+
+  .site-header {
+    display: block;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.1))), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/tablet-header-2.5x1.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/tablet-header-2.5x1.jpg);
+    background-position: center center;
+    background-size: cover;
+    margin: 0;
+  }
+
+  .site-description {
+    font-size: 1rem;
+  }
+
+  .entry .entry-header {
+    margin: calc(3 * 1rem) 1rem 1rem;
+  }
+
+  .site-title {
+    font-size: 3rem;
+  }
+
+  .site-branding {
+    margin: 0 0 0 calc(10% + 1rem);
+  }
+
+  .entry .entry-content {
+    padding: 0 1rem;
+  }
+
+  .entry .entry-header {
+    margin: calc(3 * 1rem) calc(10% + 1rem) 1rem;
+  }
+
+  .entry .entry-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .entry .entry-content p,
+  .entry .entry-content .home-cta {
+    max-width: 100%
+  }
+
+  .cta-box-left {
+    -ms-flex-preferred-size: 70%;
+    flex-basis: 70%;
+  }
+
+  .cta-box-right {
+    -ms-flex-preferred-size: 30%;
+    flex-basis: 30%;
+  }
+
+  h3.callout {
+    font-size: 1.1rem;
+  }
+
+  .entry .entry-content .board-image {
+    float: left;
+    margin-right: 1rem;
+    max-width: 50%;
+  }
+
+  .entry .entry-content .member-block {
+    max-width: 100%;
+  }
+
+  .board-description {
+    font-size: 1rem;
+  }
+
+  /* Support */
+
+  .entry .entry-content .donor-nav {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    max-width: 100%;
+  }
+
+  .responsive-spacer {
+    height: 2rem !important;
+  }
+
+  /* Archives */
+
+  .hfeed .entry .entry-header {
+    margin: calc(2 * 1rem) calc(10% + 1rem) calc(1rem / 2);
+  }
+
+  header.entry-header {
+    margin: calc(3 * 1rem) calc(10% + 1rem) 1rem;
+  }
+
+  .entry .entry-footer {
+    margin: 1rem calc(10% + 1rem) calc(2 * 1rem);
+    max-width: calc(100vw - 20%);
+  }
+
+  /* Posts */
+
+  h2.entry-title a {
+    font-size: 1.25rem;
+  }
+
+  .entry .entry-content > * {
+    max-width: 100vw;
+  }
+
+  .post-navigation {
+    margin: calc(3 * 1rem) calc(10% + 16px);
+    max-width: calc(100vw - 20%);
+  }
+
+  /* Footer */
+
+  #colophon .widget-area {
+    margin: calc(2 * 1rem) calc(10% + 1rem);
+  }
+
+  #colophon .widget-column {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+  }
+
+  #colophon .widget-column .widget {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+  }
+
+  footer.site-footer {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.3))), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/tablet-footer-3x1.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/tablet-footer-3x1.jpg);
+  }
+
+  h2.widget-title {
+    font-size: 1.25rem;
+  }
+
+  .footer-links a,
+  .contact-info a,
+  .contact-info p,
+  .widget_nav_menu ul li a {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  .site-header {
+    padding: 1rem 0 30vh;
+  }
+
+  .member-picture {
+    -ms-flex-preferred-size: 35%;
+    flex-basis: 35%;
+  }
+
+  .member-info {
+    -ms-flex-preferred-size: 65%;
+    flex-basis: 65%;
+  }
+
+  .entry .entry-content .donate-link {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  img.donate-icon {
+    margin-right: .75rem;
+  }
+}
+
+@media only screen and (min-width: 1168px) {
+
+  .entry .entry-content>* {
+    max-width: 100%;
+  }
+
+  .member-block {
+    max-width: 100%;
+  }
+
+  .member-picture {
+    -ms-flex-preferred-size: 35%;
+    flex-basis: 35%;
+  }
+
+  .member-info {
+    -ms-flex-preferred-size: 65%;
+    flex-basis: 65%;
+  }
+}
+
+@media only screen and (min-width: 1440px) {
+
+  .site-header {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.1))), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/laptop-header-3x1.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/laptop-header-3x1.jpg);
+  }
+
+  footer.site-footer {
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.3))), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/laptop-footer-4.5x1.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3)), url(https://sanghata.pacifichermitage.org/wp-content/uploads/2019/07/laptop-footer-4.5x1.jpg);
+  }
+}
