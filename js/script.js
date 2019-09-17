@@ -1,19 +1,19 @@
-/* Javascript */
-jQuery(window).scroll(function() {    // this will work when your window scrolled.
-  var height = jQuery(window).scrollTop();  //getting the scrolling height of window
-  if(height  > 100) {
-    jQuery(".main-navigation").css({
-      "position": "fixed",
-      "background": "#fff",
-      "padding": "10px 0",
-      "margin-top": "0",
-      "top": "0",
-      "z-index": "999"
-  });
-  } else{
-    jQuery(".main-navigation").css({
-      "position": "relative",
-      "background": "transparent"
-    });
+/* WordPress uses jQuery and the shorthand "$" for other functions. */
+/* Use $j instead of the shorthand or the "longhand" fix of jQuery. */
+var $j = jQuery.noConflict();
+
+$j(window).scroll(function() {    // Fires when window scrolled
+  var height = $j(window).scrollTop();  // Get scrolling height of window
+  var sBContainer = $j(".site-branding-container");  // Get the whole container
+  var sBranding = $j(".site-branding");  // Get the parent container too
+  var theNav = $j(".main-navigation");  // Give the element a new class name
+  if (height  > 100) {
+    sBContainer.addClass("fixedContainer");
+    sBranding.addClass("fixedBox");
+    theNav.addClass("fixedNav");
+  } else {
+    sBContainer.removeClass("fixedContainer");
+    sBranding.removeClass("fixedBox");
+    theNav.removeClass("fixedNav");
   }
 });
