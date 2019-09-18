@@ -249,6 +249,9 @@ a {
   position: fixed;
   padding: 10px 1em;
   top: 0;
+  /* transition: all 0.5s ease; */
+  -webkit-transition: background .5s, margin-top .5s, position .5s, padding 0s, width .5s, z-index .5s, top .5s;
+  transition: background .5s, margin-top .5s, position .5s, padding 0s, width .5s, z-index .5s, top .5s;
   width: 100%;
   z-index: 999;
 }
@@ -453,6 +456,10 @@ h1.blog-page-title {
 
 /* Posts */
 
+.single .entry-media {
+  display: none;
+  }
+
 h1.entry-title {
   font-family: Lato, sans-serif;
   font-size: 1.25rem;
@@ -601,6 +608,10 @@ h2.widget-title {
     background-position: center center;
     background-size: cover;
     margin: 0;
+  }
+
+  .fixedNav {
+    padding: 10px 0 10px calc(10% + 2rem);
   }
 
   .site-description {

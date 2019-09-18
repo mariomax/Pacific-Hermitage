@@ -19,3 +19,10 @@ function custom_add_google_fonts()
 {
     wp_enqueue_style('custom-google-fonts', 'https://fonts.googleapis.com/css?family=Lato:300,400,400i,700,900&display=swap', false);
 }
+
+/**
+ * @snippet       Disable Featured Images in Twenty Nineteen WordPress theme
+ * @sourcecode    https://rudrastyh.com/?p=8383
+ * @author        Misha Rudrastyh
+ */
+// add_filter('twentynineteen_can_show_post_thumbnail', '__return_false');
