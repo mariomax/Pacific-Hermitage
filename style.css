@@ -31,6 +31,7 @@ Text Domain: twentynineteen-child
   --gold: #D3AC5E;
   --pine: #92ACA3;
   --fog: #DEE6E3;
+  --white: #FFF;
   --cloud: #F1F2F2;
   --seed: #33363C;
 }
@@ -96,7 +97,6 @@ table,
 /* Base colors & Fonts */
 
 .site-title a {
-  color: var(--link) !important;
   font-size: 2rem;
 }
 
@@ -104,8 +104,9 @@ table,
   color: var(--seed);
 }
 
+#masthead h1.site-title a,
 .site-title a:link {
-  color: var(--link) !important;
+  color: var(--white);
   font-family: "NeutraDisplay-Draft";
 }
 
@@ -114,12 +115,8 @@ p {
 }
 
 a {
-  color: var(--link);
+  /* color: var(--link); */
   font-weight: 700;
-}
-
-a:visited {
-  color: var(--blue);
 }
 
 a:hover,
@@ -165,8 +162,9 @@ blockquote {
 /*  Header */
 
 .site-header {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.1))), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/header-mobile.jpg);
-  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/header-mobile.jpg);
+  /* background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.1))), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/header-mobile.jpg);
+  background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/header-mobile.jpg); */
+  background-image: url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/header-mobile.jpg);
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -179,7 +177,7 @@ blockquote {
 }
 
 .site-description {
-  color: var(--saffron);
+  color: var(--fog);
   display: block;
   font-family: "NeutraDisplay-Draft";
   font-size: .8rem;
@@ -208,11 +206,11 @@ a {
 }
 
 .main-navigation .main-menu>li {
-  color: var(--link);
+  color: var(--white);
 }
 
 .main-navigation .main-menu>li>a {
-  color: var(--link);
+  color: var(--white);
 }
 
 .main-navigation .main-menu>li>a:hover {
@@ -244,7 +242,7 @@ a {
 }
 
 .fixedNav {
-  background: #FFF;
+  background: var(--seed);
   margin-top: 0;
   position: fixed;
   padding: 10px 1em;
@@ -603,8 +601,9 @@ h2.widget-title {
 
   .site-header {
     display: block;
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.1))), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/header-tablet.jpg);
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/header-tablet.jpg);
+    /* background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.1))), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/header-tablet.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/header-tablet.jpg); */
+    background-image: url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/header-tablet.jpg);
     background-position: center center;
     background-size: cover;
     margin: 0;
@@ -747,8 +746,9 @@ h2.widget-title {
 @media only screen and (min-width: 1440px) {
 
   .site-header {
-    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.1))), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/header-laptop.jpg);
-    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/header-laptop.jpg);
+    /* background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.1))), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/header-laptop.jpg);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/header-laptop.jpg); */
+    background-image: url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/header-laptop.jpg);
   }
 
   footer.site-footer {
