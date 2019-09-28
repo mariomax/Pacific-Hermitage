@@ -226,7 +226,7 @@ a {
 }
 
 .main-navigation .sub-menu {
-  background-color: var(--seed);
+  background-color: var(--link);
 }
 
 .main-navigation .sub-menu>li>.menu-item-link-return {
@@ -244,13 +244,14 @@ a {
 }
 
 .fixedNav {
-  background: var(--seed);
+  background: var(--link);
   margin-top: 0;
   position: fixed;
   padding: 10px 1em;
   top: 0;
   /* transition: all 0.5s ease; */
   -webkit-transition: background .5s, margin-top .5s, position .5s, background-position 0s, padding 0s, width .5s, z-index .5s, top .5s;
+  -webkit-transition: background .5s, margin-top .5s, position .5s, padding 0s, width .5s, z-index .5s, top .5s;
   transition: background .5s, margin-top .5s, position .5s, padding 0s, width .5s, z-index .5s, top .5s;
   width: 100%;
   z-index: 999;
@@ -416,6 +417,20 @@ h3.board-member {
   border: none;
 }
 
+.fake-form {
+  background-color: var(--pine);
+  border-radius: 3px;
+  padding: 30px 20px;
+}
+
+.fake-form li {
+  color: var(--blue);
+  background-color: #FFF;
+  padding: 3px 10px;
+  list-style-type: none;
+  margin: 8px;
+}
+
 /* Archives (index.php) */
 
 header.entry-header {
@@ -461,7 +476,7 @@ h2.comments-title {
 .entry .entry-meta,
 .entry .entry-footer,
 .post-navigation .nav-links a .meta-nav {
-  color: var(--seed);
+  color: var(--link);
 }
 
 .entry .entry-meta a:hover,
@@ -469,13 +484,6 @@ h2.comments-title {
 .post-navigation .nav-links a:hover {
   color: var(--hover);
 }
-
-/* *:before {
-  background: #fff;
-  content: "" !important;
-  height: 0px;
-  width: 0px;
-} */
 
 h1:not(.site-title):before,
 h2:before {
@@ -519,8 +527,8 @@ h2.widget-title {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .footer-links a,
@@ -531,6 +539,10 @@ h2.widget-title {
   font-size: 1.125rem;
   font-weight: 500;
   line-height: 1.75;
+}
+
+.footer-button a {
+  color: #FFF;
 }
 
 .contact-info p {
@@ -590,10 +602,17 @@ h2.widget-title {
     display: block;
     /* background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.1))), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/header-tablet.jpg);
     background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/header-tablet.jpg); */
-    background-image: url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/header-tablet.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.7))), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/header-tablet.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/header-tablet.jpg);
     background-position: center center;
     background-size: cover;
     margin: 0;
+  }
+
+  .site-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 
   .fixedNav {
@@ -636,16 +655,6 @@ h2.widget-title {
   .entry .entry-content .home-cta {
     max-width: 100%
   }
-
-  /* .cta-box-left {
-    -ms-flex-preferred-size: 70%;
-    flex-basis: 70%;
-  }
-
-  .cta-box-right {
-    -ms-flex-preferred-size: 30%;
-    flex-basis: 30%;
-  } */
 
   h3.callout {
     font-size: 1.1rem;
@@ -706,7 +715,8 @@ h2.widget-title {
   footer.site-footer {
     /* background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.3))), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/footer-tablet.jpg);
     background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3)), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/footer-tablet.jpg); */
-    background-image: url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/footer-tablet.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.7))), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/footer-tablet.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/footer-tablet.jpg);
   }
 
   h2.widget-title {
@@ -746,6 +756,7 @@ h2.widget-title {
   footer.site-footer {
     /* background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.3))), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/footer-laptop.jpg);
     background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.3)), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/footer-laptop.jpg); */
-    background-image: url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/footer-laptop.jpg);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.1)), to(rgba(0, 0, 0, 0.7))), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/footer-laptop.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/footer-laptop.jpg);
   }
 }
