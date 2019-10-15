@@ -1,0 +1,64 @@
+/*-----MailChimp Widget------*/
+
+.mc_form_inside{
+	font-family: lato, helvetica, sans-serif;
+	color:#303E5C;
+}
+
+.mc_header{
+	font-family: lato, helvetica, sans-serif;
+	color: #303E5C;
+	font-size: 0.75rem;
+	font-weight: 600;
+	line-height: 1;
+	text-transform: uppercase;
+}
+
+.mc_var_label{
+	font-family: lato, helvetica, sans-serif;
+	color: #303E5C;
+	font-size: 0.75rem;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+.mc_address_label{
+	font-family: lato, helvetica, sans-serif;
+	color: #303E5C;
+	font-size: 0.75rem;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+#mc-indicates-required{
+	color: #303E5C;
+}
+
+.mc_interest_header{
+	color: #303E5C;
+	font-size: .8125rem;
+	font-weight: 600;
+	text-transform: uppercase;
+}
+
+.mc_interest_label{
+	color: #303E5C;
+}
+
+.mc_email_format{
+	color: #303E5C;
+	font-size: .8125rem;
+	font-weight: 600;
+}
+
+.mc_email_type{
+	color: #303E5C;
+	text-transform: uppercase;
+}
+
+#mc_signup_submit.button{
+	background-color: #303E5C;
+	color: #FFF;
+	font-weight: 600;
+	letter-spacing: .2em;
+	text-transform: uppercase;
+}

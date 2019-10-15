@@ -36,7 +36,7 @@ Text Domain: twentynineteen-child
 
 @font-face {
   font-family: "NeutraDisplay-Draft";
-  src: url(https://sanghata.pacifichermitage.org/wp-content/themes/twentynineteen-child/fonts/NeutraDisplay-Draft.otf);
+  src: url(https://test.pacifichermitage.org/wp-content/themes/Pacific-Hermitage/fonts/NeutraDisplay-DraftAlt.otf);
   font-weight: normal;
 }
 
@@ -164,10 +164,10 @@ blockquote {
   /* background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.9)), to(rgba(255, 255, 255, 0.1))), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/header-mobile.jpg);
   background-image: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.1)), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/header-mobile.jpg); */
   background-image: url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/header-mobile.jpg);
-  background-position: top center;
+  background-position: bottom center;
   background-repeat: no-repeat;
   background-size: cover;
-  padding: 1rem 0 25vh;
+  padding: 1rem 0 11vh;
   margin: 0;
 }
 
@@ -179,11 +179,21 @@ blockquote {
   color: var(--fog);
   display: block;
   font-family: "NeutraDisplay-Draft";
-  font-size: .8rem;
+  font-size: .9rem;
   font-weight: 600;
   -webkit-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+}
+
+.site-logo .custom-logo-link {
+  border-radius: 0;
+  height: 150px;
+  width: 150px;
+}
+
+.site-title {
+  letter-spacing: 0.19em;
 }
 
 .site-title:not(:empty)+.site-description:not(:empty):before {
@@ -207,12 +217,15 @@ a {
   margin-top: 1.5rem
 }
 
-.main-navigation .main-menu>li {
+.main-navigation .main-menu > li {
   color: var(--white);
+  text-transform: uppercase;
 }
 
-.main-navigation .main-menu>li>a {
+.main-navigation .main-menu > li > a,
+.main-navigation .sub-menu > li > a {
   color: var(--white);
+  font-size: 1rem;
 }
 
 .main-navigation .main-menu>li>a:hover {
@@ -241,6 +254,15 @@ a {
 
 .site-branding.fixedBox {
   margin: 0;
+}
+
+.site-title.fixedTitle {
+  display: inline-block;
+  padding: 0 20px;
+}
+
+.site-description.fixedDescription {
+  padding: 0 20px;
 }
 
 .fixedNav {
@@ -313,9 +335,10 @@ textarea:focus {
 #post-27 h1.entry-title,
 #post-28 h1.entry-title {
   color: var(--link);
-  font-family: "NeutraDisplay-Draft";
+  /* font-family: "NeutraDisplay-Draft"; */
   font-size: 1.5rem;
   margin: 0;
+  text-transform: uppercase;
 }
 .entry .entry-title:before {
   display: none;
@@ -608,31 +631,45 @@ h2.widget-title {
     background-size: cover;
     margin: 0;
   }
+  
 
-  .site-title {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .site-title.fixedTitle,
+  .site-description.fixedDescription {
+    padding: 0 calc(5% + 1rem);
   }
-
+   
   .fixedNav {
-    padding: 10px 0 10px calc(10% + 2rem);
+    padding: 10px 0 10px calc(5% + 20px);
   }
-
+  
   .site-description {
     font-size: 1rem;
   }
-
+  
   .entry .entry-header {
     margin: calc(3 * 1rem) 1rem 1rem;
   }
 
+  .site-header {
+    padding: 1rem 0 15vh;
+  }
+  
   .site-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     font-size: 3rem;
   }
 
   .site-branding {
-    margin: 0 0 0 calc(10% + 1rem);
+    /* margin: 0 0 0 calc(10% + 1rem); */
+    margin: 0 5%;
+  }
+
+  .site-logo {
+    position: relative;
+    padding-bottom: 1.5rem;
+    right: 0;
   }
 
   .entry .entry-content {
@@ -733,7 +770,7 @@ h2.widget-title {
 
 @media only screen and (min-width: 1024px) {
   .site-header {
-    padding: 1rem 0 30vh;
+    padding: 1rem 0 15vh;
   }
 }
 
