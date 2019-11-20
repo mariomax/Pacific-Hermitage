@@ -97,11 +97,13 @@ table,
 #h-title a,
 #p-title a {
   color: var(--white);
+  display: block;
   font-family: "NeutraDisplay-Draft";
   font-size: 2rem;
   -webkit-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+  text-align: center;
 }
 
 #h-title a:hover,
@@ -192,10 +194,12 @@ blockquote {
   -webkit-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
+  text-align:  center;
 }
 
 .site-logo .custom-logo-link {
   border-radius: 0;
+  margin: 0 auto;
   height: 150px;
   width: 150px;
 }
@@ -221,24 +225,24 @@ a {
   margin-top: 1.5rem
 }
 
-.main-navigation .main-menu > li {
+.main-navigation .main-menu>li {
   color: var(--white);
   text-transform: uppercase;
 }
 
-.main-navigation .main-menu > li > a,
-.main-navigation .sub-menu > li > a {
+.main-navigation .main-menu>li>a,
+.main-navigation .sub-menu>li>a {
   color: var(--white);
   font-size: 1rem;
 }
 
-.main-navigation .main-menu > li > a:hover {
+.main-navigation .main-menu>li>a:hover {
   border-bottom: solid 3px var(--hover);
   padding-bottom: 3px;
 }
 
-.main-navigation .main-menu > li > a:hover,
-.main-navigation .main-menu > li > a:hover+svg {
+.main-navigation .main-menu>li>a:hover,
+.main-navigation .main-menu>li>a:hover+svg {
   color: var(--hover);
 }
 
@@ -246,9 +250,13 @@ a {
   background-color: var(--link);
 }
 
-.main-navigation .sub-menu > li > .menu-item-link-return {
+.main-navigation .sub-menu>li>.menu-item-link-return {
   font-family: Lato, sans-serif;
   text-transform: uppercase;
+}
+
+.main-navigation .sub-menu > li > a:hover {
+  background: var(--saffron);
 }
 
 /* Sticky Navigation */
@@ -288,6 +296,10 @@ a {
 
 .site-branding-container {
   padding: 0 1rem;
+}
+
+.site-logo .custom-logo-link:hover {
+  box-shadow: none;
 }
 
 /* Forms */
@@ -447,8 +459,8 @@ h3.mc-cta {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
 }
 
 .mc-field-group ul {
@@ -549,8 +561,8 @@ h2.widget-title {
   font-size: 1.1rem;
   font-weight: 600;
   -webkit-hyphens: none;
-      -ms-hyphens: none;
-          hyphens: none;
+  -ms-hyphens: none;
+  hyphens: none;
   margin: 1rem 0 .5rem;
 }
 
@@ -618,17 +630,17 @@ h2.widget-title {
 /* TABLET =========================================================================== */
 @media only screen and (min-width: 768px) {
 
-  .main-navigation .sub-menu > li > a:hover,
-  .main-navigation .sub-menu > li > a:focus,
-  .main-navigation .sub-menu > li > .menu-item-link-return:hover,
-  .main-navigation .sub-menu > li > .menu-item-link-return:focus {
+  .main-navigation .sub-menu>li>a:hover,
+  .main-navigation .sub-menu>li>a:focus,
+  .main-navigation .sub-menu>li>.menu-item-link-return:hover,
+  .main-navigation .sub-menu>li>.menu-item-link-return:focus {
     background: var(--hover);
   }
 
-  .main-navigation .sub-menu > li > a:hover:after,
-  .main-navigation .sub-menu > li > a:focus:after,
-  .main-navigation .sub-menu > li > .menu-item-link-return:hover:after,
-  .main-navigation .sub-menu > li > .menu-item-link-return:focus:after {
+  .main-navigation .sub-menu>li>a:hover:after,
+  .main-navigation .sub-menu>li>a:focus:after,
+  .main-navigation .sub-menu>li>.menu-item-link-return:hover:after,
+  .main-navigation .sub-menu>li>.menu-item-link-return:focus:after {
     background: var(--hover);
   }
 
@@ -667,8 +679,10 @@ h2.widget-title {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    justify-content: center;
     font-size: 3rem;
     letter-spacing: 0.19em;
+    margin-left: 0.19em;
   }
 
   .site-branding {
@@ -774,6 +788,26 @@ h2.widget-title {
   .widget_nav_menu ul li a {
     font-size: 1rem;
   }
+
+  #colophon .widget-column {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "contact subscribe"
+      "contact donate";
+  }
+
+  #colophon .widget-column #custom_html-3 {
+    grid-area: contact;
+  }
+
+  #colophon .widget-column #custom_html-4 {
+    grid-area: subscribe;
+  }
+
+  #colophon .widget-column #custom_html-5 {
+    grid-area: donate;
+  }
 }
 
 @media only screen and (min-width: 1024px) {
@@ -782,7 +816,7 @@ h2.widget-title {
   }
 
   /* Home page: blog image/content via CSS Grid */
-  article.post {
+  .home article.post {
     display: grid;
     grid-template-columns: 2fr 3fr;
     grid-template-rows: auto;
@@ -800,6 +834,11 @@ h2.widget-title {
   .hfeed .entry .entry-header {
     grid-area: header;
     margin: calc(2 * 1rem) 5% calc(1rem / 2) 10%;
+  }
+
+  .entry .entry-header {
+    max-width: 80%;
+    margin: calc(3 * 1rem) 10%;
   }
 
   .entry .entry-content {
@@ -830,11 +869,14 @@ h2.widget-title {
   }
 
   .site-title {
+    justify-content: start;
+    margin-left: 0;
     padding: 2.25rem 0 0 1rem;
   }
 
   .site-description {
     padding: 0 0 0 1rem;
+    text-align: left;
   }
 
   .main-navigation {
@@ -856,6 +898,24 @@ h2.widget-title {
   .fixedNav {
     padding: 15px 0 15px calc(20% + 1rem);
   }
+
+  #colophon .widget-area {
+    margin: calc(2 * 1rem) calc(5% + 2rem);
+  }
+
+  #colophon .widget-column {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  #colophon #custom_html-5 {
+    margin-right: 0;
+  }
 }
 
 /* LAPTOP =========================================================================== */
@@ -871,4 +931,3 @@ h2.widget-title {
     background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7)), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/footer-laptop.jpg);
   }
 }
-
