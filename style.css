@@ -185,6 +185,12 @@ blockquote {
   margin: calc(2 * 1rem) 1rem 1rem;
 }
 
+.site-branding {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 .site-description {
   color: var(--fog);
   display: block;
@@ -211,6 +217,11 @@ blockquote {
 
 .site-title:not(:empty)+.site-description:not(:empty):before {
   content: "" !important;
+}
+
+#site-navigation.main-navigation {
+  display: flex;
+  justify-content: space-between;
 }
 
 /* Navigation */
@@ -609,6 +620,19 @@ h2.widget-title {
 }
 
 @media only screen and (min-width: 600px) {
+  #site-navigation.main-navigation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .main-navigation > div {
+    margin: 0 auto;
+  }
+
+  .main-menu-more {
+    line-height: 1px;
+  }
 
   .monk-picture {
     -ms-flex-preferred-size: 35%;
@@ -663,6 +687,22 @@ h2.widget-title {
     padding: 10px 0 10px calc(5% + 20px);
   }
 
+  .site-branding {
+    /* margin: 0 0 0 calc(10% + 1rem); */
+    margin: 0 5%;
+  }
+
+  .site-title {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    font-size: 3rem;
+    letter-spacing: 0.19em;
+    margin: 0 auto;
+    padding-left: 0.19em;
+  }
+
   .site-description {
     font-size: 1rem;
   }
@@ -673,21 +713,6 @@ h2.widget-title {
 
   .site-header {
     padding: 1rem 0 15vh;
-  }
-
-  .site-title {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    justify-content: center;
-    font-size: 3rem;
-    letter-spacing: 0.19em;
-    margin-left: 0.19em;
-  }
-
-  .site-branding {
-    /* margin: 0 0 0 calc(10% + 1rem); */
-    margin: 0 5%;
   }
 
   .site-logo {
