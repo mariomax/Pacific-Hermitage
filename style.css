@@ -12,26 +12,21 @@ Text Domain: twentynineteen-child
 */
 
 /* Color palette */
-/*
-  White Salmon Blue: #303E5C; (--link)
-  Link Hover: #305271;
-  Pine Needle: #92ACA3;
-  Forest Fog: #DEE6E3;
-  Gold: #D3AC5E;
-  Saffron: #C6842F;
-  Seed Black: #33363C;
-*/
 
 :root {
   --link: #303E5C;
   --blue: #305271;
-  --hover: #C6842F;
-  --saffron: #C6842F;
+  --hover: #9D6925;
+  --saffron: #9D6925;
   --gold: #D3AC5E;
-  --pine: #92ACA3;
+  --pine: #5D7D73;
   --fog: #DEE6E3;
   --white: #FFF;
   --seed: #33363C;
+  /* Not passing acessibility */
+  /* --pine: #92ACA3; */
+  /* --saffron: #C6842F; */
+  /* --hover: #C6842F; */
 }
 
 @font-face {
@@ -185,9 +180,22 @@ blockquote {
   margin: calc(2 * 1rem) 1rem 1rem;
 }
 
+/* Site branding & Hero */
+
+.site-branding-container {
+  padding: 0 1rem;
+}
+
 .site-branding {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
 }
 
@@ -200,14 +208,19 @@ blockquote {
   -webkit-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
-  text-align:  center;
+  text-align: center;
 }
 
 .site-logo .custom-logo-link {
   border-radius: 0;
   margin: 0 auto;
-  height: 150px;
+  height: auto;
   width: 150px;
+}
+
+.site-logo .custom-logo-link:hover {
+  -webkit-box-shadow: none;
+  box-shadow: none;
 }
 
 .site-title:not(:empty)+.site-description:not(:empty):before {
@@ -220,7 +233,11 @@ blockquote {
 }
 
 #site-navigation.main-navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 
@@ -257,6 +274,10 @@ a {
   color: var(--hover);
 }
 
+.main-navigation .sub-menu>li>.menu-item-link-return:hover {
+  background-color: var(--link);
+}
+
 .main-navigation .sub-menu {
   background-color: var(--link);
 }
@@ -266,7 +287,7 @@ a {
   text-transform: uppercase;
 }
 
-.main-navigation .sub-menu > li > a:hover {
+.main-navigation .sub-menu>li>a:hover {
   background: var(--saffron);
 }
 
@@ -303,14 +324,15 @@ a {
   z-index: 999;
 }
 
-/* Site branding & Hero */
-
-.site-branding-container {
-  padding: 0 1rem;
+.main-navigation .menu-main,
+.fixedNav .menu-main-menu-container {
+  width: calc(100vw - 5rem);
 }
 
-.site-logo .custom-logo-link:hover {
-  box-shadow: none;
+.fixedNav .menu-main-menu-container ul#menu-main-menu {
+  display: inline-block;
+  height: 29px;
+  overflow: hidden;
 }
 
 /* Forms */
@@ -619,14 +641,42 @@ h2.widget-title {
   margin-top: 0;
 }
 
+
+/* PHABLET ========================================================================== */
 @media only screen and (min-width: 600px) {
   #site-navigation.main-navigation {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
 
-  .main-navigation > div {
+  .site-header {
+    padding: 2rem 0 8vh;
+  }
+
+  .site-description {
+    padding: 0 2em;
+  }
+
+  
+  .fixedNav .menu-main-menu-container {
+    max-width: 80vw;
+  }
+
+  .fixedNav .menu-main-menu-container ul#menu-main-menu {
+    display: inline-block;
+    min-height: 29px;
+    overflow: visible;
+  }
+
+  .main-navigation>div {
     margin: 0 auto;
   }
 
@@ -684,7 +734,7 @@ h2.widget-title {
   }
 
   .fixedNav {
-    padding: 10px 0 10px calc(5% + 20px);
+    padding: 10px 0;
   }
 
   .site-branding {
@@ -692,10 +742,18 @@ h2.widget-title {
     margin: 0 5%;
   }
 
+  .site-logo {
+    position: relative;
+    padding-bottom: 1.5rem;
+    right: 0;
+  }
+
   .site-title {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     font-size: 3rem;
     letter-spacing: 0.19em;
@@ -705,6 +763,7 @@ h2.widget-title {
 
   .site-description {
     font-size: 1rem;
+    padding: 0;
   }
 
   .entry .entry-header {
@@ -712,14 +771,9 @@ h2.widget-title {
   }
 
   .site-header {
-    padding: 1rem 0 15vh;
+    padding: 2rem 0 15vh;
   }
 
-  .site-logo {
-    position: relative;
-    padding-bottom: 1.5rem;
-    right: 0;
-  }
 
   .entry .entry-content {
     padding: 0 1rem;
@@ -837,7 +891,7 @@ h2.widget-title {
 
 @media only screen and (min-width: 1024px) {
   .site-header {
-    padding: 1rem 0 10vh;
+    padding: 2rem 0 10vh;
   }
 
   /* Home page: blog image/content via CSS Grid */
@@ -890,38 +944,66 @@ h2.widget-title {
 
   /* Large header: site logo moves to left side (inline) */
   .site-branding {
-    margin: 2rem 0 0 20%;
-  }
-
-  .site-title {
-    justify-content: start;
-    margin-left: 0;
-    padding: 2.25rem 0 0 1rem;
-  }
-
-  .site-description {
-    padding: 0 0 0 1rem;
-    text-align: left;
-  }
-
-  .main-navigation {
-    padding: 0 0 0 1rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-areas:
+      "logo title"
+      "logo description"
+      "logo navigation";
+    margin: 2rem 0;
   }
 
   .site-logo {
-    position: absolute;
-    padding-right: 2rem;
-    right: 95%;
-    top: 0;
+    grid-area: logo;
+    padding-bottom: 0;
   }
 
   .site-logo .custom-logo-link {
-    height: 225px;
-    width: 225px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-line-pack: center;
+    align-content: center;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+    margin: 0 0 0 auto;
+  }
+
+  .site-title {
+    grid-area: title;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
+    justify-content: start;
+    margin: 0 auto;
+    padding: 2.25rem 0 0;
+  }
+
+  .site-description {
+    grid-area: description;
+    margin: 0 auto;
+  }
+
+  .main-navigation {
+    grid-area: navigation;
+    padding: 0;
+  }
+
+  .main-navigation .main-menu>li.menu-item-has-children {
+    padding: 0 .5em;
+  }
+
+  .main-navigation ul.main-menu>li {
+    padding: 0 .5em;
+  }
+
+  .site-logo .custom-logo-link {
+    height: auto;
+    width: 200px;
   }
 
   .fixedNav {
-    padding: 15px 0 15px calc(20% + 1rem);
+    padding: 15px 0;
   }
 
   #colophon .widget-area {
@@ -949,6 +1031,14 @@ h2.widget-title {
   .site-header {
     background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.4))), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/header-laptop.jpg);
     background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)), url(https://test.pacifichermitage.org/wp-content/uploads/2019/09/header-laptop.jpg);
+  }
+
+  .site-branding {
+    grid-template-columns: 1fr 2.5fr 1fr;
+  }
+
+  .site-logo {
+    padding-right: 2em;
   }
 
   footer.site-footer {
