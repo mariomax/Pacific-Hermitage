@@ -727,7 +727,6 @@ h2.widget-title {
     margin: 0;
   }
 
-
   .site-title.fixedTitle,
   .site-description.fixedDescription {
     padding: 0 calc(5% + 1rem);
@@ -735,6 +734,10 @@ h2.widget-title {
 
   .fixedNav {
     padding: 10px 0;
+  }
+
+  .fixedNav .menu-main-menu-container {
+    width: auto;
   }
 
   .site-branding {
@@ -942,6 +945,18 @@ h2.widget-title {
     max-width: 100%;
   }
 
+  .blog #main {
+    margin: 0 5%;
+  }
+
+  .page .entry .entry-header {
+    margin: calc(3 * 1rem) 15%;
+  }
+
+  .page .entry .entry-content {
+    margin: 0 15%;
+  }
+
   /* Large header: site logo moves to left side (inline) */
   .site-branding {
     display: grid;
@@ -1039,6 +1054,18 @@ h2.widget-title {
 
   .site-logo {
     padding-right: 2em;
+  }
+
+  .blog #main {
+    margin: 0 10%;
+  }
+
+  .page .entry .entry-header {
+    margin: calc(3 * 1rem) 20%;
+  }
+  
+  .page .entry .entry-content {
+    margin: 0 20%;
   }
 
   footer.site-footer {
