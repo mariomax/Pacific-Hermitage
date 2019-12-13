@@ -136,6 +136,10 @@ a:active {
   color: var(--link);
 }
 
+h2.entry-title {
+  line-height: .9;
+}
+
 .entry-content h2 {
   color: var(--pine);
   font-size: 1.5rem;
@@ -162,6 +166,15 @@ blockquote {
 
 .entry .entry-title:before {
   display: none !important;
+}
+
+.wp-block-image .alignleft {
+  float: none;
+  margin:0 auto;
+}
+
+.wp-block-image img {
+  width: 100%;
 }
 
 /*  Header */
@@ -796,6 +809,11 @@ h2.widget-title {
 
   .entry .entry-content .monk-block {
     max-width: 100%;
+  }
+
+  .wp-block-image .alignleft {
+    float: left;
+    margin: 0 1em 0 0;
   }
 
   .entry .entry-content p,
