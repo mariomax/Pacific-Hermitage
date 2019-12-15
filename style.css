@@ -170,7 +170,7 @@ blockquote {
 
 .wp-block-image .alignleft {
   float: none;
-  margin:0 auto;
+  margin: 0 auto;
 }
 
 .wp-block-image img {
@@ -682,7 +682,7 @@ h2.widget-title {
     padding: 0 2em;
   }
 
-  
+
   .fixedNav .menu-main-menu-container {
     max-width: 80vw;
   }
@@ -1035,7 +1035,12 @@ h2.widget-title {
   }
 
   .site-logo .custom-logo-link {
-    height: auto;
+    height: 200px !important;
+    width: 200px;
+  }
+
+  .site-logo .custom-logo-link img {
+    height: 200px !important;
     width: 200px;
   }
 
@@ -1085,7 +1090,7 @@ h2.widget-title {
   .page .entry .entry-header {
     margin: calc(3 * 1rem) 20%;
   }
-  
+
   .page .entry .entry-content {
     margin: 0 20%;
   }
