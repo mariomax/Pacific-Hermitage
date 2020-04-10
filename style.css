@@ -162,6 +162,10 @@ blockquote {
   border-left: 2px solid var(--link);
 }
 
+article ul li {
+  font-size: 16px;
+}
+
 /* Twenty Nineteen tweaks */
 
 .entry .entry-title:before {
