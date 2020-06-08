@@ -181,6 +181,10 @@ article ul li {
   width: 100%;
 }
 
+.sticky-post {
+  background: var(--hover);
+}
+
 /*  Header */
 
 .site-header {
@@ -965,6 +969,11 @@ h2.widget-title {
 
 /* WP_2019 ========================================================================== */
 @media only screen and (min-width: 1168px) {
+
+  article {
+    margin: 0 auto;
+    max-width: 1000px;
+  }
 
   .entry .entry-content>* {
     max-width: 100%;
