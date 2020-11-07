@@ -473,6 +473,11 @@ h3.callout {
   background: var(--gold);
 }
 
+#main article footer span.byline,
+#main article header .entry-meta span.byline {
+  display: none;
+}
+
 /* About */
 
 .entry .entry-content .board-image {
